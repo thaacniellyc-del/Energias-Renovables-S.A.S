@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="Container">
+        <div class="Container-form">
+            <form class="sign-up" action="Registro.php" method="POST" onsubmit="return validarContrasenas()">
+                <h3>Registrarse</h3>
+
+                <div class="Container-input">
+                    <input type="number" name="Documento" placeholder="Documento" required>
+                </div>
+
+                <div class="Container-input">
+                    <input type="text" name="nombres" placeholder="Nombres" required>
+                </div>
+
+                <div class="Container-input">
+                    <input type="text" name="apellidos" placeholder="Apellidos" required>
+                </div>
+
+                <div class="Container-input">
+                    <input type="number" name="edad" placeholder="Edad" required>
+                </div>
+
+                <div class="Container-input">
+                    <input type="email" name="usuario" placeholder="Correo electrónico" required>
+                </div>
+
+                <div class="Container-input">
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                </div>
+
+                <div class="Container-input">
+                    <input type="password" id="confirmarContrasena" name="confirmarContrasena" placeholder="Confirmar contraseña" required>
+                </div>
+
+                <button class="button" type="submit">REGISTRARSE</button>
+                <p>¿Ya tienes cuenta? <a href="Index.html">Inicia sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validarContrasenas() {
+            const pass = document.getElementById('contrasena').value.trim();
+            const confirm = document.getElementById('confirmarContrasena').value.trim();
+            if (pass !== confirm) {
+                alert('Las contraseñas no coinciden');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
+
+

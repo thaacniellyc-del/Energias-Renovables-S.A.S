@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Usuario</title>
+</head>
+<body>
+    <h2>Actualizar datos de usuario</h2>
+    <form action="update.php" method="POST">
+        <input type="number" name="Identificador" placeholder="ID del usuario" required>
+        <input type="number" name="Documento" placeholder="Nuevo documento" required>
+        <input type="number" name="Edad" placeholder="Nueva edad" required>
+        <input type="text" name="Nombres" placeholder="Nuevo nombre" required>
+        <input type="text" name="Apellidos" placeholder="Nuevo apellido" required>
+        <input type="email" name="Usuario" placeholder="Nuevo usuario" required>
+        <input type="text" name="Contrasena" placeholder="Nueva contraseña" required>
+        <input type="text" name="ConfirmarContrasena" placeholder="Confirmar contraseña" required>
+        <button type="submit">Actualizar</button>
+    </form>
+</body>
+</html>
